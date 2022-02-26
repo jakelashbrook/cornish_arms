@@ -12,9 +12,32 @@
     color: #fafafa;
 }
 
+.text-blk {
+  color: #212529;
+}
+
 .btn-blk {
     background-color: #fafafa;
     color: #212529;
+}
+
+.nav-item .main-nav-link {
+  color: #fafafa !important;
+}
+
+.active {
+  border-bottom: 1px solid #fafafa;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active,
+.main-nav-link:focus {
+    border-bottom: 1px ridge #fafafa;
+}
+
+/*            bg and borders     */
+.bg-blk {
+  background-color: #212529;
 }
 
 /* Float - taken from Hover.css */
@@ -49,5 +72,5 @@
   }
 
   .hero-text-cont {
-      background-color: rgba(255,255,255, 0.3);
+      background-color: rgba(0,0,0,0.5);
   }

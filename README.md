@@ -20,6 +20,8 @@ Index of Content add here
     - As a user I would like to be able to see the menu and allergens information.
 
 - ### Shopper
+    - As a shopper I want to be able to place my order securely online and access
+    an order confirmation.
 
 - ### Admin
     - As an administator, I would like to be able to add/update the menu items and
@@ -44,10 +46,20 @@ Index of Content add here
 
 ## Testing
 
+See [Testing.md]()
+
+The site has been regularly monitored with Chrome Dev Tools, PEP8 and relevant validation tools throughout
+development.
+
 ## Deployment
 
-## Credits
+## Heroku Deployment
 
+## Credits
+- ### Code
+
+- ### Ackowledgements
+    - Boutique Ado project for teaching me skills to use to build this first release project.
 
 ## Features
 
@@ -76,22 +88,23 @@ Index of Content add here
 ## Technologies Used
 
  - ### Languages
-    - [HTML]
-    - [CSS3]
-    - [Python]
-    - [Javascript]
+    - [HTML]('https://developer.mozilla.org/en-US/docs/Web/HTML#:~:text=HTML%20(HyperText%20Markup%20Language)%20is,functionality%2Fbehavior%20(JavaScript).)
+    - [CSS3]('https://developer.mozilla.org/en-US/docs/Web/CSS')
+    - [Python]('https://www.python.org/')
+    - [Javascript]('https://www.javascript.com/')
 
  - ### Libraries and Frameworks
-    - [Bootstrap]
-    - [FontAwesome]
-    - [Django]
-    - [jQuery]
+    - [Bootstrap]('https://getbootstrap.com/')
+    - [FontAwesome]('https://fontawesome.com/')
+    - [Django]('https://docs.djangoproject.com/')
+    - [jQuery]('https://jquery.com/download/')
+    - [hover.css]('https://ianlunn.github.io/Hover/')
  
  - ### Other Services
-    - [Dev Tools]
-    - [Github]
-    - [Gitpod]
-    - [pip3]
-    - [Heroku]
+    - [Dev Tools]('https://developer.chrome.com/docs/devtools/')
+    - [Github]('https://github.com/')
+    - [Gitpod]('https://gitpod.io/')
+    - [pip3]('https://pip.pypa.io/')
+    - [Heroku]('https://www.heroku.com/')
 
 
