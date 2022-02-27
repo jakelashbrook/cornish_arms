@@ -38,13 +38,15 @@ background-size: cover; background-position: center;">
         <p><strong>Sunday:</strong></p>
       </div>
       <div class="col text-right text-blk">
-        <p>4:30pm to 10pm</p>
-        <p>4:30pm to 10pm</p>
-        <p>4:30pm to 10pm</p>
-        <p>4:30pm to 10pm</p>
-        <p>12pm to 11pm</p>
-        <p>12pm to 11pm</p>
-        <p>12pm to 11pm</p>
+      {% for o in opening %}
+        <p>{{ o.monday }}</p>
+        <p>{{ o.tuesday }}</p>
+        <p>{{ o.wednesday }}</p>
+        <p>{{ o.thursday }}</p>
+        <p>{{ o.friday }}</p>
+        <p>{{ o.saturday }}</p>
+        <p>{{ o.sunday }}</p>
+        {% endfor %}
       </div>
     </div>
     </div>
@@ -62,35 +64,33 @@ background-size: cover; background-position: center;">
           <p><strong>Sunday:</strong></p>
         </div>
         <div class="col text-right text-blk">
-          <p>6pm to 7:30pm</p>
-          <p>6pm to 7:30pm</p>
-          <p>6pm to 7:30pm</p>
-          <p>6pm to 7:30pm</p>
-          <p>6pm to 7:30pm</p>
-          <p>6pm to 7:30pm</p>
-          <p>12pm to 3pm & 6pm to 7:30pm</p>
+          {% for f in food %}
+          <p>{{ f.monday }}</p>
+          <p>{{ f.tuesday }}</p>
+          <p>{{ f.wednesday }}</p>
+          <p>{{ f.thursday }}</p>
+          <p>{{ f.friday }}</p>
+          <p>{{ f.saturday }}</p>
+          <p>{{ f.sunday }}</p>
+          {% endfor %}
         </div>
       </div>
     </div>
   </div>
 </div>
 </div>
-
+</div>
 <!-- About us image -->
-<div class="jumbotron jumbotron-fluid hero-img" style="background-image: url(media/cornisharms.webp); 
+{% for a in about %}
+<div class="jumbotron jumbotron-fluid hero-img mb-0" style="background-image: url({{ a.background_image }}); 
 background-repeat: no-repeat; background-size: cover; background-position: center; opacity: 0.95;">
 <div class="container hero-text-cont text-wht">
-  <h3 class="text-uppercase text-wht pt-3">About us <i class="fas fa-book"></i></h3>
-  <p class="pt-3">If you get peckish, we have a evening menu and specials board full of good wholesome food that you can enjoy in the 
-    separate family dining area to the right of the bar. The best Sunday Roasts are available every week. Meals are prepared
-    with locally sourced meat and fish, vegetables are bought daily to ensure the food we serve is as fresh and tasty as it
-    can be.</p>
-  <p class="pb-3">We also have a popular dessert menu with a selection of hot and cold scrumptious puddings.
-   There are vegetarian options available and if you have special dietary needs please inform a member of staff beforehand. 
-   A children's menu is also available Otherwise snacks such as crisps, pork scatchings and peanuts are available from 
-   across the bar.</p>
+  <h3 class="text-uppercase text-wht pt-3 text-left text-lg-center">{{ a.title }} <i class="fas fa-book"></i></h3>
+  <p class="pt-3 text-left text-lg-center">{{ a.paragraph1 }}</p>
+  <p class="pb-3 text-left text-lg-center">{{ a.paragraph2 }}</p>
 </div>
 </div>
+{% endfor %}
 
 
 {% endblock %}

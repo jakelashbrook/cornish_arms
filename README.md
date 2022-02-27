@@ -46,7 +46,7 @@ Index of Content add here
 
 ## Testing
 
-See [Testing.md]()
+See [Testing.md](cornish_arms/testing.md)
 
 The site has been regularly monitored with Chrome Dev Tools, PEP8 and relevant validation tools throughout
 development.
@@ -84,6 +84,9 @@ development.
     - #### Elements used across the site
 
 - ### Features to Implement
+- A jobs application area 
+- A backend table allocation service linked with bookings made so that tables can
+be allocated upon reservations made based on whether there are tables available.
 
 ## Technologies Used
 

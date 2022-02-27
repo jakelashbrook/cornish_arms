@@ -1,0 +1,1 @@
+[{"model": "home.Food", "pk": 1, "fields": {"monday":"4pm to 10pm", "tuesday": "4pm 10pm", "wednesday": "4pm - 10pm", "thursday":"4pm tp 10pm", "friday":"4pm to 11pm", "saturday":"12pm to 11pm", "sunday":"12pm to 11pm","if_lunch": "False", "lunch_hours": "12pm to 3pm"}}]
