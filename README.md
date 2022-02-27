@@ -99,6 +99,7 @@ development.
     - [Django]('https://docs.djangoproject.com/')
     - [jQuery]('https://jquery.com/download/')
     - [hover.css]('https://ianlunn.github.io/Hover/')
+    - [Google Fonts]('https://fonts.google.com/')
  
  - ### Other Services
     - [Dev Tools]('https://developer.chrome.com/docs/devtools/')
@@ -106,5 +107,6 @@ development.
     - [Gitpod]('https://gitpod.io/')
     - [pip3]('https://pip.pypa.io/')
     - [Heroku]('https://www.heroku.com/')
+    - [Google Directions]('https://www.google.co.uk/maps/dir/?api=1&destination=50.20058710086446,-5.47443270175664')
 
 

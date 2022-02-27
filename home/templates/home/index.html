@@ -1,10 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_meta %}
+  <meta name="description" content="The Cornish Arms - St Ives. Order food online | Book a table | See our events ">
+{% endblock %}
+
 {% block content %}
 <!-- Hero Image and cta btn -->
 <div class="jumbotron jumbotron-fluid hero-img" 
-style="background-image: url('media/food-corn.jpg'); background-repeat: no-repeat; 
+style="background-image: url('media/food-corn.webp'); background-repeat: no-repeat; 
 background-size: cover; background-position: center;">
     <div class="container hero-text-cont text-left text-lg-center">
       <h2 class="display-4 text-uppercase text-wht">Order from our menu now</h2>
@@ -14,15 +18,40 @@ background-size: cover; background-position: center;">
   </div>
 
 <div class="container-fluid text-center">
-  <div class="container justify-content-center pt-3 pb-3">
-    <img src="media/cornisharms_logo.jpg" alt="" width="150px" height="150px">
- </div>
+
+<!-- Opening times section -->
+<div class="container-fluid">
   <div class="container">
-    <div class="row">
-      <!-- Bar opening times -->
-      <div class="col-sm">
-        <h4 class="text-uppercase bg-blk text-wht">bar times</h4>
-        <div class="row">
+  <h3 class="text-uppercase">Opening Times <i class="far fa-clock"></i></h3>
+  <div class="row">
+    <!-- Bar opening times -->
+    <div class="col-sm">
+      <h4 class="text-uppercase bg-blk text-wht text-left text-lg-center">bar times</h4>
+      <div class="row">
+      <div class="col text-left">
+        <p><strong>Monday:</strong></p>
+        <p><strong>Wednesday:</strong></p>
+        <p><strong>Wednesday:</strong></p>
+        <p><strong>Thursday:</strong></p>
+        <p><strong>Friday:</strong></p>
+        <p><strong>Saturday:</strong></p>
+        <p><strong>Sunday:</strong></p>
+      </div>
+      <div class="col text-right text-blk">
+        <p>4:30pm to 10pm</p>
+        <p>4:30pm to 10pm</p>
+        <p>4:30pm to 10pm</p>
+        <p>4:30pm to 10pm</p>
+        <p>12pm to 11pm</p>
+        <p>12pm to 11pm</p>
+        <p>12pm to 11pm</p>
+      </div>
+    </div>
+    </div>
+    <!-- Food service times -->
+    <div class="col-sm">
+      <h4 class="text-uppercase bg-blk text-wht text-left text-lg-center">food times</h4>
+      <div class="row">
         <div class="col text-left">
           <p><strong>Monday:</strong></p>
           <p><strong>Wednesday:</strong></p>
@@ -33,42 +62,35 @@ background-size: cover; background-position: center;">
           <p><strong>Sunday:</strong></p>
         </div>
         <div class="col text-right text-blk">
-          <p>4:30pm to 10pm</p>
-          <p>4:30pm to 10pm</p>
-          <p>4:30pm to 10pm</p>
-          <p>4:30pm to 10pm</p>
-          <p>12pm to 11pm</p>
-          <p>12pm to 11pm</p>
-          <p>12pm to 11pm</p>
-        </div>
-      </div>
-      </div>
-      <!-- Food service times -->
-      <div class="col-sm">
-        <h4 class="text-uppercase bg-blk text-wht">food times</h4>
-        <div class="row">
-          <div class="col text-left">
-            <p><strong>Monday:</strong></p>
-            <p><strong>Wednesday:</strong></p>
-            <p><strong>Wednesday:</strong></p>
-            <p><strong>Thursday:</strong></p>
-            <p><strong>Friday:</strong></p>
-            <p><strong>Saturday:</strong></p>
-            <p><strong>Sunday:</strong></p>
-          </div>
-          <div class="col text-right text-blk">
-            <p>6pm to 7:30pm</p>
-            <p>6pm to 7:30pm</p>
-            <p>6pm to 7:30pm</p>
-            <p>6pm to 7:30pm</p>
-            <p>6pm to 7:30pm</p>
-            <p>6pm to 7:30pm</p>
-            <p>12pm to 3pm & 6pm to 7:30pm</p>
-          </div>
+          <p>6pm to 7:30pm</p>
+          <p>6pm to 7:30pm</p>
+          <p>6pm to 7:30pm</p>
+          <p>6pm to 7:30pm</p>
+          <p>6pm to 7:30pm</p>
+          <p>6pm to 7:30pm</p>
+          <p>12pm to 3pm & 6pm to 7:30pm</p>
         </div>
       </div>
     </div>
   </div>
 </div>
+</div>
+
+<!-- About us image -->
+<div class="jumbotron jumbotron-fluid hero-img" style="background-image: url(media/cornisharms.webp); 
+background-repeat: no-repeat; background-size: cover; background-position: center; opacity: 0.95;">
+<div class="container hero-text-cont text-wht">
+  <h3 class="text-uppercase text-wht pt-3">About us <i class="fas fa-book"></i></h3>
+  <p class="pt-3">If you get peckish, we have a evening menu and specials board full of good wholesome food that you can enjoy in the 
+    separate family dining area to the right of the bar. The best Sunday Roasts are available every week. Meals are prepared
+    with locally sourced meat and fish, vegetables are bought daily to ensure the food we serve is as fresh and tasty as it
+    can be.</p>
+  <p class="pb-3">We also have a popular dessert menu with a selection of hot and cold scrumptious puddings.
+   There are vegetarian options available and if you have special dietary needs please inform a member of staff beforehand. 
+   A children's menu is also available Otherwise snacks such as crisps, pork scatchings and peanuts are available from 
+   across the bar.</p>
+</div>
+</div>
+
 
 {% endblock %}
