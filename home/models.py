@@ -82,7 +82,7 @@ class About(models.Model):
     class Meta:
         ''' Sets the name in the admin '''
         verbose_name_plural = 'About Us'
-    
+
     title = models.CharField(max_length=60, blank=False, null=False)
     paragraph1 = models.TextField()
     paragraph2 = models.TextField()
