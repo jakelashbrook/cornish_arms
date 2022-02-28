@@ -5,7 +5,7 @@ class Opening(models.Model):
     ''' A model for the opening times '''
     class Meta:
         verbose_name_plural = 'Opening Times'
-    
+    model_name = models.Charfield(max_length=40)
     monday = models.CharField(max_length=50, default='timezone.now')
     tuesday = models.CharField(max_length=50, default='timezone.now')
     wednesday = models.CharField(max_length=50, default='timezone.now')
@@ -14,26 +14,8 @@ class Opening(models.Model):
     saturday = models.CharField(max_length=50, default='timezone.now')
     sunday = models.CharField(max_length=50, default='timezone.now')
 
-    def get_monday(self):
-        return self.monday
-    
-    def get_tuesday_close(self):
-        return self.tuesday
-    
-    def get_wednesday(self):
-        return self.wednesday
-    
-    def get_thursday(self):
-        return self.thursday
-    
-    def get_friday(self):
-        return self.friday
-
-    def get_saturday(self):
-        return self.saturday
-
-    def get_sunday(self):
-        return self.sunday
+    def __str__(self):
+        return self.model_name
 
 
 class Food(models.Model):
@@ -41,7 +23,7 @@ class Food(models.Model):
 
     class Meta:
         verbose_name_plural = 'Food Times'
-
+    model_name = models.CharField(max_length=30)
     monday = models.CharField(max_length=50, default='timezone.now')
     tuesday = models.CharField(max_length=50, default='timezone.now')
     wednesday = models.CharField(max_length=50, default='timezone.now')
@@ -52,29 +34,8 @@ class Food(models.Model):
     if_lunch = models.BooleanField(default=False)
     lunch_hours = models.CharField(max_length=50, default='timezone.now')
 
-    def get_monday(self):
-        return self.monday
-    
-    def get_tuesday_close(self):
-        return self.tuesday
-    
-    def get_wednesday(self):
-        return self.wednesday
-    
-    def get_thursday(self):
-        return self.thursday
-    
-    def get_friday(self):
-        return self.friday
-
-    def get_saturday(self):
-        return self.saturday
-
-    def get_sunday(self):
-        return self.sunday
-
-    def get_lunch_hours(self):
-        return self.lunch_hours
+    def __str__(self):
+        return self.model_name
 
 
 class About(models.Model):
@@ -82,7 +43,7 @@ class About(models.Model):
     class Meta:
         ''' Sets the name in the admin '''
         verbose_name_plural = 'About Us'
-
+    model_name = models.CharField(max_length=20)
     title = models.CharField(max_length=60, blank=False, null=False)
     paragraph1 = models.TextField()
     paragraph2 = models.TextField()
@@ -90,5 +51,5 @@ class About(models.Model):
         upload_to='media/', height_field=None, 
         width_field=None, max_length=100)
     
-    def get_title(self):
-        return self.title
+    def __str__(self):
+        return self.model_name
