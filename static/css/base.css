@@ -32,6 +32,11 @@ h6 {
     color: #fafafa !important;
 }
 
+.btn-wht {
+  background-color: #fafafa !important;
+  color: #212529!important;
+}
+
 .nav-item {
   font-family: 'sans-serif';
 }
@@ -56,6 +61,7 @@ h6 {
 }
 
 /* Float - taken from Hover.css */
+
 .hvr-float {
     display: inline-block;
     vertical-align: middle;

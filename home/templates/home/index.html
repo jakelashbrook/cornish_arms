@@ -13,7 +13,7 @@ background-size: cover; background-position: center;">
     <div class="container hero-text-cont text-left text-lg-center">
       <h2 class="display-4 text-uppercase text-wht">Order from our menu now</h2>
       <p class="lead text-capitalized text-wht">Open 7 days a week!</p>
-      <a href="" class="btn btn-blk mb-3 hvr-float text-uppercase">Order</a>
+      <a href="" class="btn btn-wht mb-3 hvr-float text-uppercase">Order</a>
     </div>
   </div>
 
@@ -21,7 +21,7 @@ background-size: cover; background-position: center;">
 
 <!-- Opening times section -->
 <div class="container-fluid">
-  <div class="container">
+  <div class="container pt-3 pb-3">
   <h3 class="text-uppercase">Opening Times <i class="far fa-clock"></i></h3>
   <div class="row">
     <!-- Bar opening times -->
@@ -84,7 +84,7 @@ background-size: cover; background-position: center;">
 {% for a in about %}
 <div class="jumbotron jumbotron-fluid hero-img mb-0" style="background-image: url({{ a.background_image }}); 
 background-repeat: no-repeat; background-size: cover; background-position: center; opacity: 0.95;">
-<div class="container hero-text-cont text-wht">
+<div class="container hero-text-cont text-wht" height="100%">
   <h3 class="text-uppercase text-wht pt-3 text-left text-lg-center">{{ a.title }} <i class="fas fa-book"></i></h3>
   <p class="pt-3 text-left text-lg-center">{{ a.paragraph1 }}</p>
   <p class="pb-3 text-left text-lg-center">{{ a.paragraph2 }}</p>

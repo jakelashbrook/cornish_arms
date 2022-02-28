@@ -60,15 +60,23 @@
             </div>
              <!-- Login/Logout -->
             <div class="nav-item">
-                <a href="{% url 'account_login' %}" class="text-wht">
-                   <strong>Login</strong> 
-                </a> |
-                <a href="{% url 'account_signup' %}" class="text-wht">
-                    <strong>Register</strong> 
-                 </a>
+                {% if user.is_authenticated %}
                 <a href="{% url 'account_logout' %}" class="text-wht">
                     <strong>Logout</strong> 
                  </a>
+                    {% if user.is_superuser %} 
+                       | <a href="{% url 'account_logout' %}" class="text-wht">
+                            <strong>Manager</strong> 
+                        </a>
+                    {% endif %}
+                 {% else %}
+                 <a href="{% url 'account_login' %}" class="text-wht">
+                    <strong>Login</strong> 
+                 </a> |
+                 <a href="{% url 'account_signup' %}" class="text-wht">
+                     <strong>Register</strong> 
+                  </a>
+                  {% endif %}
             </div>
             <!-- Basket -->
             <div class="nav-item">
@@ -88,7 +96,7 @@
 
     {% endblock %}
 
-    <footer class="container-fluid bg-blk fixed-bottom">
+    <footer class="container-fluid bg-blk">
         <div class="row">
             <div class="col-12 d-lg-none">
                 <div class="nav-item text-wht">
@@ -106,7 +114,10 @@
         <!-- Copyright -->
         <div class="row">
             <div class="col-12 text-wht text-center p-1">
-                <strong>&copy; The Cornish Arms 2022 - Made by Jake Lashbrook</strong>
+                <p>
+                <strong>&copy; The Cornish Arms 2022</strong>
+                <strong>Made by Jake Lashbrook</strong>
+                </p>
             </div>
         </div>
     </footer>
