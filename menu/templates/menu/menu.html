@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_meta %}
+{% endblock %}
+
+{% block extra_css %}
+{% endblock %}
+
+{% block extra_title %} The Menu {% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+      <h3 class="text-left text-lg-center text-uppercase">The Menu</h3>
+      <hr width="40%">
+        
+    {% for c in category %}
+    {% for d in dishes %}
+    {% if d.category == c.name %}
+      <div class="accordion" id="{{ c.name }}">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="{{ c.name }}Heading">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="{{ c.name }}Target" aria-expanded="true" aria-controls="{{ c.name }}">
+              {{ c.friendly_name }}
+            </button>
+          </h2>
+          <div id="{{ c.name }}" class="accordion-collapse collapse show" aria-labelledby="{{ c.name }}Heading" data-bs-parent="{{ c.name }}Target">
+            
+                    <div class="accordion-body">
+                    <strong>{{ d.name }}</strong>
+                    </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+    </div>
+{% endblock %}  
+
+
+
+{% block postloadjs %}
+{{ block.super}}
+<script type="text/js">
+
+</script>
+{% endblock %}

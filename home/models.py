@@ -5,7 +5,7 @@ class Opening(models.Model):
     ''' A model for the opening times '''
     class Meta:
         verbose_name_plural = 'Opening Times'
-    model_name = models.Charfield(max_length=40)
+    model_name = models.CharField(max_length=40, default='Opening Times')
     monday = models.CharField(max_length=50, default='timezone.now')
     tuesday = models.CharField(max_length=50, default='timezone.now')
     wednesday = models.CharField(max_length=50, default='timezone.now')
@@ -23,7 +23,7 @@ class Food(models.Model):
 
     class Meta:
         verbose_name_plural = 'Food Times'
-    model_name = models.CharField(max_length=30)
+    model_name = models.CharField(max_length=30, default='Food Times')
     monday = models.CharField(max_length=50, default='timezone.now')
     tuesday = models.CharField(max_length=50, default='timezone.now')
     wednesday = models.CharField(max_length=50, default='timezone.now')
@@ -43,7 +43,7 @@ class About(models.Model):
     class Meta:
         ''' Sets the name in the admin '''
         verbose_name_plural = 'About Us'
-    model_name = models.CharField(max_length=20)
+    model_name = models.CharField(max_length=20, default='About Us')
     title = models.CharField(max_length=60, blank=False, null=False)
     paragraph1 = models.TextField()
     paragraph2 = models.TextField()
