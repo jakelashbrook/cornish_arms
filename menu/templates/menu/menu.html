@@ -11,16 +11,53 @@
 
 {% block content %}
 <div class="container-fluid">
-      <h3 class="text-left text-lg-center text-uppercase">The Menu</h3>
-      <hr width="40%">
-<div class="container">
-  <div class="row">
-    <div class="col-sm">
-      {{ dishes }}
+  <div class="row bg-blk text-wht">
+    <div class="col">
+      <form class="form-inline pt-2 pb-2 mt-3 mb-3">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search the menu.." aria-label="Search">
+        <button class="btn btn-wht hvr-float my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+      </form>
     </div>
+    <div class="col">
+      <h2 class="text-left text-lg-center text-uppercase pt-2 pb-2 mt-3 mb-3">
+        The Menu <i class="fas fa-utensils pl-3"></i>
+      </h2>
+    </div>
+    <div class="col inline-item"></div>
   </div>
-</div>
-    
+      <div class="row mt-3 mb-3">
+      {% for dish in dishes %}
+        <div class="col-sm-6 col-lg-3 d-flex align-items-stretch">
+          <div class="card">
+            {% if dish.image %}
+            <img src="{{ dish.image.url }}" class="card-img-top h-50" alt="{{ dish.title }}">
+            {% endif %}
+            <div class="card-body">
+              <div class="row">
+                <div class="col-6 fit-content">
+              <h5 class="card-title">{{ dish.name }}</h5>
+              </div>
+              {% if dish.is_vegan == True %}
+              <div class="col-3">
+                <i class="fas fa-seedling text-success" title="{{ dish.name }} is Vegan"></i>
+              </div>
+              {% endif %}
+              {% if dish.is_gluten_free == False %}
+              <div class="col-3">
+                <i class="fas fa-bread-slice text-danger" title="{{ dish.name }} is not Gluten Free"></i>
+              </div>
+              {% endif %}
+            </div>
+              <h6 class="card-subtitle mb-2 text-muted">£{{ dish.price }}</h6>
+              <p class="card-text">{{ dish.description }}</p>
+              <p><strong class="font-weight-bold">Allergens:</strong><small> {{ dish.if_allergens }}</small></p>
+              <a href="#" class="btn btn-blk text-wht position-absolute" style="bottom: 20px; left: 20px">Add to basket</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+</div>   
 {% endblock %}  
 
 
