@@ -16,7 +16,7 @@ class CategoryAdmin(admin.ModelAdmin):
 class DishesAdmin(admin.ModelAdmin):
     ''' Organises the Dishes Admin '''
     list_display = (
-        'name', 'category',
+        'name', 'category_name',
         'price', 'description',
         'if_allergens', 'out_of_stock',
         'is_vegan', 'is_gluten_free',

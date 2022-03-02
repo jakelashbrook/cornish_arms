@@ -7,7 +7,7 @@ class Category(models.Model):
     class Meta:
         ''' How it appears in the admin '''
         verbose_name_plural = 'Service Categories'
-    
+  
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -27,7 +27,7 @@ class Dishes(models.Model):
         ''' Set name in django admin '''
         verbose_name_plural = 'Dishes'
 
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category_name = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=300)
     description = models.TextField()
     is_vegan = models.BooleanField(default=False)
@@ -39,4 +39,4 @@ class Dishes(models.Model):
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
-        return self.category
+        return self.name

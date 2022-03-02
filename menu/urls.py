@@ -1,7 +1,6 @@
-from django.contrib import admin
 from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('menu/menu.html', views.menu, name='menu')
+    path('', views.get_menu, name='menu_items')
 ]
